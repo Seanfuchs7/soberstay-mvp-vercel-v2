@@ -1,0 +1,1 @@
+export default function Operators(){return <div style={{padding:'8rem 2rem'}}><h1>Operators</h1><p>List your facility (MVP placeholder).</p></div>}

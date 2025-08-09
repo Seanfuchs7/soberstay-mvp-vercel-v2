@@ -1,0 +1,1 @@
+export default function FAQ(){return <div style={{padding:'8rem 2rem'}}><h1>FAQ</h1><p>MVP placeholder.</p></div>}

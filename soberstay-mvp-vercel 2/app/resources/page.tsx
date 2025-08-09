@@ -1,0 +1,1 @@
+export default function Resources(){return <div style={{padding:'8rem 2rem'}}><h1>Resources</h1><p>MVP placeholder.</p></div>}

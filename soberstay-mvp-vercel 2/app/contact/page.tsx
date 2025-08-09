@@ -1,0 +1,1 @@
+export default function Contact(){return <div style={{padding:'8rem 2rem'}}><h1>Contact Us</h1><p>MVP placeholder.</p></div>}

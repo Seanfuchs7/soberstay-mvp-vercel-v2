@@ -1,0 +1,54 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Facility {
+  id             Int           @id @default(autoincrement())
+  slug           String        @unique
+  name           String
+  city           String
+  state          String
+  priceMonthly   Int
+  gender         String
+  level          String
+  bedsTotal      Int
+  bedsAvailable  Int
+  rating         Float
+  latitude       Float?
+  longitude      Float?
+  imageUrl       String?
+  verified       Boolean       @default(true)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  applications   Application[]
+}
+
+model Application {
+  id                 Int       @id @default(autoincrement())
+  facilityId         Int
+  facility           Facility  @relation(fields: [facilityId], references: [id])
+  firstName          String
+  lastName           String
+  email              String
+  phone              String
+  dob                DateTime
+  desiredMoveIn      DateTime
+  emergencyName      String
+  emergencyPhone     String
+  emergencyRelation  String
+  sobrietyDate       DateTime
+  daysSober          Int
+  program            String
+  programName        String?
+  story              String
+  sponsorStatus      String
+  employment         String
+  status             String    @default("submitted")
+  createdAt          DateTime  @default(now())
+}

@@ -1,0 +1,1 @@
+export default function Terms(){return <div style={{padding:'8rem 2rem'}}><h1>Terms of Service</h1><p>MVP placeholder.</p></div>}
